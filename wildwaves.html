@@ -16,19 +16,27 @@
             const attractionType = prompt('Which attraction do you want to visit: type "wave" for wave pool, "water" for waterslide, or "river" for lazy river?');
             const userHeight = prompt('What is your height in inches?');
             const isAllowed = checkHeight (attractionType, userHeight);
-            
+
 
             console.log("User's selected attraction is " + attractionType);
             console.log("User's height is " + userHeight);
         }
 
         function checkHeight (attraction, height) {
-            const height = userHeight;
-            const attraction =  attractionType;
-            if (height >= attraction ){
-                isAllowed = true;
+            switch (attraction){
+                case wave: 
+                height >= WAVE_POOL_MIN_HEIGHT;
+                return true;
+                break;
+                case water: 
+                height >= WATERSLIDE_MIN_HEIGHT;
+                return true;
+                break;
+                case river: 
+                height >= LAZY_RIVER_MIN_HEIGHT;
+                return true;
+                break;
             }
-            return false;
         }
     </script>
 </body>
