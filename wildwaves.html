@@ -15,28 +15,30 @@
         function buyTicket(){
             const attractionType = prompt('Which attraction do you want to visit: type "wave" for wave pool, "water" for waterslide, or "river" for lazy river?');
             const userHeight = prompt('What is your height in inches?');
+            const accompanied = prompt('If you are not 48in will you be accompanied by an adult?');
             const isAllowed = checkHeight (attractionType, userHeight);
 
 
             console.log("User's selected attraction is " + attractionType);
             console.log("User's height is " + userHeight);
+            console.log("Are you tall enough to ride? " + isAllowed);
         }
 
-        function checkHeight (attraction, height) {
+        function checkHeight (attraction, height, accompanied) {
             switch (attraction){
-                case wave: 
-                height >= WAVE_POOL_MIN_HEIGHT;
-                return true;
+                case 'wave': 
+                isAllowed = height >= WAVE_POOL_MIN_HEIGHT;
                 break;
-                case water: 
-                height >= WATERSLIDE_MIN_HEIGHT;
-                return true;
+
+                case 'water': 
+                isAllowed = height >= WATERSLIDE_MIN_HEIGHT;
                 break;
-                case river: 
-                height >= LAZY_RIVER_MIN_HEIGHT;
-                return true;
+
+                case 'river': 
+                isAllowed = height >= LAZY_RIVER_MIN_HEIGHT;
                 break;
             }
+            return isAllowed;
         }
     </script>
 </body>
