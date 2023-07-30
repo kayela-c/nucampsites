@@ -9,8 +9,8 @@
     <button type="button" onclick="buyTicket()">Purchase Attraction</button>
     <script>
         const WAVE_POOL_MIN_HEIGHT = 42; // in inches
-    	const WATERSLIDE_MIN_HEIGHT = 48; // in inches
-    	const LAZY_RIVER_MIN_HEIGHT = 36; // in inches
+    	    const WATERSLIDE_MIN_HEIGHT = 48; // in inches
+    	    const LAZY_RIVER_MIN_HEIGHT = 36; // in inches
 
         function buyTicket(){
             const attractionType = prompt('Which attraction do you want to visit: type "wave" for wave pool, "water" for waterslide, or "river" for lazy river?');
@@ -24,14 +24,14 @@
             console.log("Are you tall enough to ride? " + isAllowed);
         }
 
-        function checkHeight (attraction, height) {
+        function checkHeight (attraction, height, adultCompanion) {
             switch (attraction){
                 case 'wave': 
                 isAllowed = height >= WAVE_POOL_MIN_HEIGHT;
                 break;
 
                 case 'water': 
-                isAllowed = height >= WATERSLIDE_MIN_HEIGHT;
+                isAllowed = height >= WATERSLIDE_MIN_HEIGHT || adultCompanion.toLowerCase() === true;
                 break;
 
                 case 'river': 
