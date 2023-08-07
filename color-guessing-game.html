@@ -46,30 +46,22 @@
     </style>
     <script>
 
-        //prompt what color i am thinking of?
-        //run through array and check if answer matches
-        //limit array to number of items in colors_array
-        //when array is finished if no match then asnwer is wrong
-        //when array is finished if match then answer correct
-        //count number of tries
-        // use sort() to sort the array and tell player that their answer is higher or lower alphabetically than theirs 
-        //sort really isn't needed - should I added it anyway to make the code a template for later use? 
-        //- place comment in codeto explain to person reading it
-
         const COLORS_ARRAY = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
         function runGame(){
             let guess = '';
             let correct = false;
-            const targetIndex: Math.floor(Math.random() * COLORS_ARRAY.length);
+            //const targetIndex: Math.random() * COLORS_ARRAY.length;
             //Math.random() generates random number from 0 - 1;
             //Math.floor() rounds down to nearest whole number
             const target = COLORS_ARRAY[targetIndex];
             //stores the content of the Colors_array at the index number that was randomized.
 
-            do {
-             guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY +
-             '\n\nWhat color am I thinking of?\n');
-            }while(!correct)
+            // do {
+            //  guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY +
+            //  '\n\nWhat color am I thinking of?\n');
+            // }while(!correct)
+
+            alert("button works");
        
         }
 
