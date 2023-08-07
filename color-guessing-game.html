@@ -57,24 +57,24 @@
         //- place comment in codeto explain to person reading it
 
         const COLORS_ARRAY = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+        function runGame(){
+            let guess = '';
+            let correct = false;
+            const targetIndex: Math.floor(Math.random() * COLORS_ARRAY.length);
+            //Math.random() generates random number from 0 - 1;
+            //Math.floor() rounds down to nearest whole number
+            const target = COLORS_ARRAY[targetIndex];
+            //stores the content of the Colors_array at the index number that was randomized.
 
-        let guess = '';
-        let correct = false;
-        const targetIndex: Math.floor(Math.random() * COLORS_ARRAY.length);
-        //Math.random() generates random number from 0 - 1;
-        //Math.floor() rounds down to nearest whole number
-        const target = COLORS_ARRAY[targetIndex];
-        //stores the content of the Colors_array at the index number that was randomized. 
-        function runGame(
-
-            for (let i  = 0; i < COLORS_ARRAY.length; i++){
-
-            }
-        )
- 
-        function(guess, target){
-
+            do {
+             guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY +
+             '\n\nWhat color am I thinking of?\n');
+            }while(!correct)
+       
         }
+
+ 
+        //function(guess, target){}
     </script>
 </body>
 </html>
