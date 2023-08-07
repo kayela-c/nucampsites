@@ -9,22 +9,31 @@
     <button type="button" onclick="runGame()">Start Game</button>
     <style>
         body {
-            background-color: #4158D0;
-            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            background-color: rgb(24, 24, 24);
         }
         button {
             padding: 15px;
-            border: 2px solid gray;
+            border: 2px solid white;
+            color: white;
             border-radius: 10px;
-            background-image: linear-gradient(120deg, rbga(255, 255, 255, 0.1), rbga(255, 255, 255, 0.5));
-            color: gray;
-            
-
-            
+            background-color: rgba(255, 255, 255, 0.2);
+            background-image: linear-gradient(to bottom right, rgba(168, 237, 234, 0.2)0%, rgba(254, 214, 227, 0.2) 100%);
         }
     </style>
     <script>
 
+        //prompt what color i am thinking of?
+        //run through array and check if answer matches
+        //limit array to number of items in colors_array
+        //when array is finished if no match then asnwer is wrong
+        //when array is finished if match then answer correct
+        //count number of tries
+        // use sort() to sort the array and tell player that their answer is higher or lower alphabetically than theirs 
+        //sort really isn't needed if 
+
+        const COLORS_ARRAY = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+
+        function runGame()
     </script>
 </body>
 </html>
